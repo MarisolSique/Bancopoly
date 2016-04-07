@@ -33,4 +33,8 @@ public class Jugadores {
     public Integer cantidadUsuarios() {
         return null;
     }
+
+    public Jugador buscar(String id) {
+        return null;
+    }
 }

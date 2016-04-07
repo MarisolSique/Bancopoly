@@ -12,6 +12,8 @@ public class Jugador {
     private String posicion;
     private Boolean saltar_turno;
     private Integer cuota = 50;
+    private Integer premio_vuelta = 100;
+    
 
     private void Jugador() {
     }
@@ -32,7 +34,7 @@ public class Jugador {
         return "";
     }
 
-    public Boolean actualizarSaldo(Integer saldo) {
+    public Boolean aumentarSaldo(Integer saldo) {
         return Boolean.TRUE;
     }
 
@@ -64,6 +66,22 @@ public class Jugador {
      * Utilizar si se usa una cuota diferente
      */
     public Boolean cobrarPorPaso(Integer cuota) {
+        return Boolean.TRUE;
+    }
+    /*
+     * Utilizar si se usa el premio por defecto
+     */
+    public Boolean premiarVuelta() {
+        return premiarVuelta(premio_vuelta);
+    }
+    /*
+     * Utilizar si se usa un premio diferente
+     */
+    public Boolean premiarVuelta(Integer premio_vuelta) {
+        return Boolean.TRUE;
+    }
+
+    public Boolean reducirSaldo(Integer saldo) {
         return Boolean.TRUE;
     }
 }
