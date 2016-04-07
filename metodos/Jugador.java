@@ -11,8 +11,9 @@ public class Jugador {
     private Integer turno;
     private String posicion;
     private Boolean saltar_turno;
+    private Integer cuota = 50;
 
-    public void Jugador() {
+    private void Jugador() {
     }
 
     public Jugador obtenerDatos() {
@@ -51,6 +52,18 @@ public class Jugador {
     }
 
     public Boolean eliminarPropiedad(String id) {
+        return Boolean.TRUE;
+    }
+    /*
+     * Utilizar si se usa la cuota por defecto
+     */
+    public Boolean cobrarPorPaso() {
+        return cobrarPorPaso(cuota);
+    }
+    /*
+     * Utilizar si se usa una cuota diferente
+     */
+    public Boolean cobrarPorPaso(Integer cuota) {
         return Boolean.TRUE;
     }
 }
