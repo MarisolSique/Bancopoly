@@ -18,7 +18,7 @@ import metodos.*;
 
 public class Tablero extends JFrame {
 
-    private Boolean activo = false;
+    
     private JButton btnRegresar = new JButton();
 
     public Tablero() {
@@ -46,17 +46,13 @@ public class Tablero extends JFrame {
     }
     
     private void inicializarJuego(){
-        //Cargar opciones de tablero
-        //Cargar jugadores
-        Jugadores jugadores = new Jugadores();
-        jugadores.solicitarJugadores();
-        List lista = jugadores.getJugadores();
-        
-    
-        /*for (int i=0;i<lista.size();i++) { 
-            Jugador a = (Jugador)lista.get(i);
-            System.out.println(a.getNombre());
-        }*/
+        //Inicializar Banco
+            Banco banco = new Banco();
+        //Inicializar Jugadores
+            Jugadores jugadores = new Jugadores();
+        //Inicializar Propiedades
+/*      jugadores.solicitarJugadores();
+        List lista = jugadores.getJugadores();   */     
     }
 
     private void btnRegresar_actionPerformed(ActionEvent e) {

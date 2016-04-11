@@ -3,7 +3,7 @@ package metodos;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Interfaz {
+public class mi {
     class Ficha {
         
         private List listaFichas = new ArrayList<Ficha>();

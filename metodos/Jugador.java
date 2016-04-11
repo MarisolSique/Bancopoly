@@ -37,11 +37,11 @@ public class Jugador {
  * 
  */
     //Establecer que el jugador pierde 1 turno
-        public void setTurnoMenos() {
+        public void setPierdeTurno() {
             this.saltar_turno = true;
         }
     //Regresar a FALSE, atributo para saltar turno
-        public void resetTurnoMenos() {
+        public void resetPierdeTurno() {
             this.saltar_turno = false;
         }
     //Establecer el turno del jugador
@@ -77,7 +77,7 @@ public class Jugador {
         public String getNombre() {
             return this.nombre;
         }
-    //Obtener los datos de identificaciòn del jugador
+    //Obtener los datos de identificación del jugador
         public Jugador getDatos() {
             return null;
         }

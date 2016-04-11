@@ -2,9 +2,6 @@ package metodos;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import java.util.UUID;
-
 import javax.swing.JOptionPane;
 
 public class Jugadores {
@@ -12,6 +9,8 @@ public class Jugadores {
         private List<Jugador> listaJugadores;
         private Integer max_usuarios;
         private Integer min_usuarios;
+        private String jugador_actual;
+        private String jugador_siguiente;
 /*
  * 
  * INICIALIZACIÓN
@@ -22,6 +21,8 @@ public class Jugadores {
             this.listaJugadores = new ArrayList<Jugador>();
             this.max_usuarios = 3;
             this.min_usuarios = 2;
+            this.jugador_actual = "";
+            this.jugador_siguiente = "";
         }
  /*
  * 
@@ -59,6 +60,19 @@ public class Jugadores {
                 }
             }
         }
+    //Definir de manera global el jugador actual
+        public void setJugadorActual(String id) {
+            this.jugador_actual = id;
+        }
+    //Definir quién es el siguiente jugador
+        public void setSiguienteTurno() {
+        }
+    //Ordenar turno de jugadores ingresados
+        public void ordenarJugadores() {
+        }
+    //Obtener el siguiente jugador
+        public void getSiguienteTurno() {
+        }
 /*
  * 
  * OBTENER VALORES
@@ -72,6 +86,10 @@ public class Jugadores {
         public List getJugadores() {
             return listaJugadores;
         }
+    //Obtener el jugador de turno
+        public String getJugadorActual() {
+         return this.jugador_actual;
+        }
 /*
  * 
  * GENERALES
@@ -83,14 +101,19 @@ public class Jugadores {
         }
     //Retirar a un jugador del juego, sin borrarlo de la lista
         public Boolean retirar(String id) {
-            return Boolean.TRUE;
+            //Obtener jugador
+                Jugador jugador = buscar(id);
+            //Devolver dinero
+                jugador.getSaldo();
+            //Devolver propiedades
+                return null;
         }
         //Devolver al banco las propiedades del jugador retirado
-            public Boolean devolverPropiedades(List propiedades) {
+            public Boolean devolverPropiedades(Banco banco, List propiedades) {
                 return Boolean.TRUE;
             }
         //Devolver al banco el dinero del jugador retirado
-            public Boolean devolverDinero(Integer saldo) {
+            public Boolean devolverDinero(Banco banco, Integer saldo) {
                 return Boolean.TRUE;
             }
     //Eliminar a un jugador del juego    
