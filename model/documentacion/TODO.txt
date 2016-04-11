@@ -1,0 +1,3 @@
+JUGADORES
+    - Qué hacer si presionan CANCELAR en el ingreso del nombre del jugador
+    - Distribucion de los turnos

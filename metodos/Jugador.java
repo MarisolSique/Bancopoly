@@ -49,12 +49,12 @@ public class Jugador {
             this.turno = turno;
         }
     //Establecer posición actual del jugador en el mapa
-        public Boolean setPosicion(String id) {
-            return Boolean.TRUE;
+        public void setPosicion(String id) {
+            this.posicion = id;
         }
     //Establecer nombre del jugador
-        public Boolean setNombre(String nombre) {
-            return Boolean.TRUE;
+        public void setNombre(String nombre) {
+            this.nombre = nombre;
         }
     //Agregar nueva propiedad a la lista del jugador
         public Boolean setNuevaPropiedad(String id) {
@@ -66,8 +66,16 @@ public class Jugador {
  * 
  */
     //Obtener turno del jugador
-        public String getTurno() {
-            return "";
+        public String getID() {
+            return this.id;
+        }
+    //Obtener turno del jugador
+        public Integer getTurno() {
+            return this.turno;
+        }
+    //Obtener nombre del jugador
+        public String getNombre() {
+            return this.nombre;
         }
     //Obtener los datos de identificaciòn del jugador
         public Jugador getDatos() {
@@ -75,15 +83,15 @@ public class Jugador {
         }
     //Obtener el saldo actual del jugador
         public Integer getSaldo() {
-            return null;
+            return this.saldo;
         }
     //Obtener posición actual del jugador en el mapa
         public String getPosicion() {
-            return "";
+            return this.posicion;
         }
     //Obtener listado actual de propiedades del jugador
-        public Propiedades getPropiedades() {
-            return null;
+        public List getPropiedades() {
+            return this.listaPropiedades;
         }
 /*
  * 
@@ -91,12 +99,12 @@ public class Jugador {
  * 
  */
     //Restarle al jugador el saldo que se envíe
-        public Boolean reducirSaldo(Integer saldo) {
-            return Boolean.TRUE;
+        public void reducirSaldo(Integer s) {
+            this.saldo-=s;
         }
     //Sumarle al jugador el saldo que se envíe
-        public Boolean aumentarSaldo(Integer saldo) {
-            return Boolean.TRUE;
+        public void aumentarSaldo(Integer s) {
+            this.saldo+=s;
         }
     //Eliminar propiedad de la lista del jugador
         public Boolean eliminarPropiedad(String id) {
@@ -111,11 +119,11 @@ public class Jugador {
                 return Boolean.TRUE;
             }
     //Utilizar si se usa el premio por defecto
-        public Boolean premiarVuelta() {
-            return premiarVuelta(premio_vuelta);
+        public void premiarVuelta() {
+            premiarVuelta(premio_vuelta);
         }
         //Utilizar si se usa un premio diferente
-            public Boolean premiarVuelta(Integer premio_vuelta) {
-                return Boolean.TRUE;
+            public void premiarVuelta(Integer premio_vuelta) {
+                this.saldo+=premio_vuelta;
             }
 }
